@@ -1,0 +1,33 @@
+$margin: 10px;
+
+@mixin border-radius-mixin($border) {
+  border-radius: $border;
+  -webkit-border-radius: $border;
+  -moz-border-radious: $border;
+}
+
+div {
+	margin: $margin - 20px;
+	@include border-radius-mixin(10px);
+}
+
+#featured {
+	padding:10px;
+	
+	.header {
+		font-size:2em;
+		font-weight:bold;
+		margin-bottom:15px;
+	}
+	
+	.content {
+		margin-bottom:15px;
+		@include border-radius-mixin(10px);
+	}
+	
+	.highlight {
+		color:#FC0;
+	}
+}
+
+@import "gallery.scss";
